@@ -30,7 +30,7 @@ function LogPanel({ jobId, live }: { jobId: string; live: boolean }) {
   return (
     <pre
       ref={pre}
-      className="max-h-80 overflow-auto bg-zinc-950 px-4 py-3 font-mono text-[11px] leading-relaxed text-zinc-300"
+      className="max-h-80 overflow-auto bg-ink px-4 py-3 font-mono text-[11px] leading-relaxed text-ink-fg"
     >
       {log.data?.trim() || (log.loading ? 'Loading…' : 'No log output yet.')}
     </pre>

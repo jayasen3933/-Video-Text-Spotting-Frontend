@@ -4,7 +4,17 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#fafafa" />
     <title>LOGO · Video Text Spotting</title>
+    <script>
+      // Apply the saved theme before first paint (no light flash in dark mode). Mirrors src/lib/theme.tsx.
+      (function () {
+        var p = 'system';
+        try { p = localStorage.getItem('logo-theme') || 'system'; } catch (e) {}
+        var dark = p === 'dark' || (p !== 'light' && window.matchMedia('(prefers-color-scheme: dark)').matches);
+        if (dark) document.documentElement.classList.add('dark');
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>

@@ -217,7 +217,7 @@ export const VideoViewer = forwardRef<VideoViewerHandle, Props>(function VideoVi
         </div>
       </div>
 
-      <div className="flex justify-center bg-zinc-950">
+      <div className="flex justify-center bg-ink">
       <div
         className="relative w-full"
         style={{
@@ -227,8 +227,8 @@ export const VideoViewer = forwardRef<VideoViewerHandle, Props>(function VideoVi
       >
         {failed[mode] ? (
           <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 px-6 text-center">
-            <FileWarning className="h-6 w-6 text-zinc-500" strokeWidth={1.5} />
-            <div className="max-w-md text-sm text-zinc-300">
+            <FileWarning className="h-6 w-6 text-ink-muted" strokeWidth={1.5} />
+            <div className="max-w-md text-sm text-ink-fg">
               {mode === 'rendered' && !webVideo
                 ? 'The rendered video uses the mp4v codec, which browsers cannot play. Install ffmpeg on the API host to get a browser-playable copy, or download the file.'
                 : 'Your browser cannot play this video format.'}

@@ -88,7 +88,11 @@ export function LinkButton({
 /* ---------------------------------------------------------------- Card */
 
 export function Card({ className, children }: { className?: string; children: ReactNode }) {
-  return <div className={cx('rounded-lg border border-zinc-200 bg-white', className)}>{children}</div>;
+  return (
+    <div className={cx('rounded-lg border border-zinc-200 bg-white shadow-[0_1px_2px_rgb(0_0_0/0.04)] dark:shadow-none', className)}>
+      {children}
+    </div>
+  );
 }
 
 export function CardHeader({

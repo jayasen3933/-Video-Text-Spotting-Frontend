@@ -5,6 +5,7 @@ import '@fontsource-variable/inter';
 import './index.css';
 import Layout from './components/Layout';
 import { HealthProvider } from './lib/health';
+import { ThemeProvider } from './lib/theme';
 import NewAnalysis from './pages/NewAnalysis';
 import Jobs from './pages/Jobs';
 import JobDetail from './pages/JobDetail';
@@ -24,8 +25,10 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <HealthProvider>
-      <RouterProvider router={router} />
-    </HealthProvider>
+    <ThemeProvider>
+      <HealthProvider>
+        <RouterProvider router={router} />
+      </HealthProvider>
+    </ThemeProvider>
   </StrictMode>,
 );

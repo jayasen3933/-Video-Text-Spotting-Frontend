@@ -43,7 +43,7 @@ export function Dropzone({
     return (
       <div className="overflow-hidden rounded-md border border-zinc-200">
         {preview && (
-          <div className="flex justify-center bg-zinc-950">
+          <div className="flex justify-center bg-ink">
             <video
               src={preview}
               controls

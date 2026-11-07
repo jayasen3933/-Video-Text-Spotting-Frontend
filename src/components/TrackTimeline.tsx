@@ -55,7 +55,7 @@ export const TrackTimeline = memo(function TrackTimeline({
                   width: `${width}%`,
                   background: trackColor(t.id, 55),
                   opacity: dim ? 0.25 : 0.9,
-                  outline: selected === t.id ? '1.5px solid #18181b' : undefined,
+                  outline: selected === t.id ? '1.5px solid rgb(var(--c-zinc-900))' : undefined,
                   outlineOffset: 1,
                 }}
                 onMouseEnter={() => onHover(t.id)}
